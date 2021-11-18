@@ -32,6 +32,11 @@ Pod::Spec.new do |s|
   
   s.swift_version = '5.0'
   
+  valid_archs = ['arm64', 'x86_64']
+  s.xcconfig = {
+    'VALID_ARCHS' =>  valid_archs.join(' '),
+  }
+  
   # s.resource_bundles = {
   #   'swiftVibrant' => ['swiftVibrant/Assets/*.png']
   # }
